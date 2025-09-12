@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerBridge - Your Future Career Path</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1200x600/6366f1/ffffff?text=Career+Guidance');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Style for scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600">CareerBridge</a>
+            <div class="flex items-center space-x-4">
+                 <div class="hidden md:flex items-center space-x-4">
+                    <a href="#features" class="text-gray-600 hover:text-indigo-600">Features</a>
+                    <a href="#services" class="text-gray-600 hover:text-indigo-600">Services</a>
+                    <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+                </div>
+                <!-- Updated Sign Up Button -->
+                <a href="login.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
+                    Sign Up
+                </a>
+                 <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#features" class="block text-gray-600 hover:text-indigo-600 py-2">Features</a>
+            <a href="#services" class="block text-gray-600 hover:text-indigo-600 py-2">Services</a>
+            <a href="#contact" class="block text-gray-600 hover:text-indigo-600 py-2">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white">
+        <div class="container mx-auto px-6 py-24 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Find Your Future</h1>
+            <p class="text-lg md:text-xl mb-8">Personalized career guidance at every step.</p>
+            <a href="#features" class="bg-white text-indigo-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-200 transition duration-300">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 reveal">Explore Your Path</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Quiz Feature -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 reveal">
+                    <div class="bg-indigo-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">AI-Powered Quiz</h3>
+                    <p class="text-gray-600">Take our intelligent quiz to discover career paths and courses tailored to your personality, interests, and skills.</p>
+                </div>
+                <!-- College Feature -->
+                <a href="college_directory.html" class="block">
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 reveal">
+                        <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 14l9-5-9-5-9 5 9 5zm0 7v-7m0 0l-9-5m9 5l9-5">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">College Directory</h3>
+                        <p class="text-gray-600">Explore a comprehensive database of colleges. Read authentic reviews, compare campuses, and find the perfect fit for you.</p>
+                    </div>
+                </a>
+
+                <!-- Job Feature -->
+                 <div class="transition-transform hover:-translate-y-2">
+                    <a href="job_opportunities.html" class="block">
+                        <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transform transition-all duration-300">
+      
+                            <!-- CIRCULAR ICON -->
+                            <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                                <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                        d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m0-6l9-5m-9 5l-9-5" />
+                                </svg>
+                            </div>
+
+                            <!-- TEXT -->
+                            <h3 class="text-xl font-semibold mb-4 text-center">Job Opportunities</h3>
+                            <p class="text-gray-600 text-center">
+                                Discover job openings, internships, and professional counseling to kickstart your career and achieve your goals.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 reveal">Additional Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Bridge Courses -->
+                <div class="bg-white p-8 rounded-lg shadow-lg reveal">
+                    <h3 class="text-xl font-semibold mb-4">Bridge Courses</h3>
+                    <p class="text-gray-600 mb-4">Prepare for your engineering degree with our specialized bridge courses designed to strengthen your fundamentals.</p>
+                    <a href="#" class="text-indigo-600 font-semibold hover:underline">Learn More &rarr;</a>
+                </div>
+                <!-- Professional Counseling -->
+                <div class="bg-white p-8 rounded-lg shadow-lg reveal">
+                    <h3 class="text-xl font-semibold mb-4">Professional Counseling</h3>
+                    <p class="text-gray-600 mb-4">Connect with experienced counselors in your area for personalized guidance and support on your career journey.</p>
+                    <a href="#" class="text-indigo-600 font-semibold hover:underline">Find a Counselor &rarr;</a>
+                </div>
+                <!-- Exam Hub -->
+                <div class="bg-white p-8 rounded-lg shadow-lg reveal">
+                    <h3 class="text-xl font-semibold mb-4">Exam Hub</h3>
+                    <p class="text-gray-600 mb-4">Stay updated with important exam dates, registration deadlines, and direct links. Never miss an opportunity.</p>
+                    <button class="w-full bg-yellow-400 text-yellow-900 font-bold py-2 px-4 rounded-lg hover:bg-yellow-500 transition duration-300">Add to Google Calendar</button>
+                </div>
+                 <!-- Authentic Reviews -->
+                <div class="bg-white p-8 rounded-lg shadow-lg reveal">
+                    <h3 class="text-xl font-semibold mb-4">Authentic College Reviews</h3>
+                    <p class="text-gray-600 mb-4">Get the real story. Read detailed and authentic reviews from current students and alumni before you decide.</p>
+                    <a href="#" class="text-indigo-600 font-semibold hover:underline">Browse Reviews &rarr;</a>
+                </div>
+                <!-- Government Resources -->
+                <div class="bg-white p-8 rounded-lg shadow-lg reveal">
+                    <h3 class="text-xl font-semibold mb-4">Government Resources</h3>
+                    <p class="text-gray-600 mb-4">Access a curated list of official government websites for scholarships, educational loans, and other essential information.</p>
+                    <a href="#" class="text-indigo-600 font-semibold hover:underline">Visit Links &rarr;</a>
+                </div>
+                 <!-- Spam Protection Info -->
+                <div class="bg-white p-8 rounded-lg shadow-lg reveal">
+                    <h3 class="text-xl font-semibold mb-4">Spam Mail Protection</h3>
+                    <p class="text-gray-600 mb-4">We help you identify and filter spam mails, ensuring you only receive legitimate communication from colleges and employers.</p>
+                     <a href="#" class="text-indigo-600 font-semibold hover:underline">Learn How &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold">CareerBridge</h2>
+                    <p class="mt-2">Your bridge to a successful future.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold uppercase">Resources</h2>
+                        <ul class="text-gray-400">
+                            <li class="mb-4"><a href="#" class="hover:underline">About Us</a></li>
+                            <li><a href="#" class="hover:underline">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold uppercase">Follow us</h2>
+                        <ul class="text-gray-400">
+                            <li class="mb-4"><a href="#" class="hover:underline ">Github</a></li>
+                            <li><a href="#" class="hover:underline">Discord</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold uppercase">Legal</h2>
+                        <ul class="text-gray-400">
+                            <li class="mb-4"><a href="#" class="hover:underline">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:underline">Terms &amp; Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-700 sm:mx-auto" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-400 sm:text-center">©️ 2025 <a href="#" class="hover:underline">CareerBridge™️</a>. All Rights Reserved.</span>
+                <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                    <!-- Social Media Icons -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Navigation Menu Logic ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        window.addEventListener('click', function(e) {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // --- Scroll Animation Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            });
+
+            const elementsToReveal = document.querySelectorAll('.reveal');
+            elementsToReveal.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

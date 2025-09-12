@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerce Jobs - CareerBridge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style> 
+        body { 
+            font-family: 'Inter', sans-serif; 
+        } 
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-600">CareerBridge</a>
+            <a href="job_opportunities.html" class="text-gray-600 hover:text-indigo-600">
+                &larr; Back to Categories
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold">Careers in Commerce</h1>
+            <p class="text-gray-600 mt-2">Opportunities in finance, accounting, management, and business.</p>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="mb-8 max-w-md mx-auto">
+            <label for="degree-filter" class="block text-sm font-medium text-gray-700 mb-2">Filter by Qualification Type:</label>
+            <select id="degree-filter" class="w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                <option value="all">All Qualifications</option>
+                <option value="professional">Professional Certification (CA, CS, CMA)</option>
+                <option value="degree">Bachelor's Degree (B.Com, BBA)</option>
+                <option value="postgrad">Post-Graduate / MBA</option>
+                <option value="certificate">12th Pass / Certificate / Short Course</option>
+            </select>
+        </div>
+
+        <!-- Job Cards -->
+        <div id="job-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / B.Com (Hons)"><div><h4 class="font-semibold text-lg">Accountant</h4><p class="text-sm text-gray-600 mt-1">Maintains financial records, bookkeeping, prepares accounts.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / B.Com (Hons)</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="CA (Chartered Accountancy)"><div><h4 class="font-semibold text-lg">Chartered Accountant (CA)</h4><p class="text-sm text-gray-600 mt-1">Auditing, taxation, financial reporting and advisory services.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: CA (Chartered Accountancy)</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="CS (Company Secretary)"><div><h4 class="font-semibold text-lg">Company Secretary (CS)</h4><p class="text-sm text-gray-600 mt-1">Corporate compliance, secretarial practices, corporate governance.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: CS (Company Secretary)</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="CMA / Cost Accounting"><div><h4 class="font-semibold text-lg">Cost & Management Accountant (CMA)</h4><p class="text-sm text-gray-600 mt-1">Cost management, internal controls, budgeting and costing.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: CMA / Cost Accounting</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / BBA"><div><h4 class="font-semibold text-lg">Financial Analyst</h4><p class="text-sm text-gray-600 mt-1">Analyzes financial statements, forecasting and valuation.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / BBA</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / BBA / MBA"><div><h4 class="font-semibold text-lg">Investment Banker (Analyst)</h4><p class="text-sm text-gray-600 mt-1">Advises on M&A, capital raising, and financial structuring.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / BBA / MBA</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / BBA"><div><h4 class="font-semibold text-lg">Equity Research Analyst</h4><p class="text-sm text-gray-600 mt-1">Researches companies/sectors and builds investment theses.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / BBA</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / B.Tech"><div><h4 class="font-semibold text-lg">Quantitative Analyst (Quant)</h4><p class="text-sm text-gray-600 mt-1">Builds mathematical models for trading and risk.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / B.Tech</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BBA / BMS"><div><h4 class="font-semibold text-lg">Management Consultant (Analyst)</h4><p class="text-sm text-gray-600 mt-1">Advises businesses on strategy, operations and management.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BBA / BMS</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BBA / MBA"><div><h4 class="font-semibold text-lg">Human Resources (HR) Manager</h4><p class="text-sm text-gray-600 mt-1">Manages recruitment, employee relations, and HR policies.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BBA / MBA</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BBA / B.Com / Diploma"><div><h4 class="font-semibold text-lg">Digital Marketing Executive</h4><p class="text-sm text-gray-600 mt-1">Executes digital marketing campaigns (SEO, SEM, social media).</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BBA / B.Com / Diploma</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BBA (Marketing) / MBA"><div><h4 class="font-semibold text-lg">Marketing Manager</h4><p class="text-sm text-gray-600 mt-1">Develops marketing strategies and oversees campaigns.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BBA (Marketing) / MBA</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / BBA / Diploma"><div><h4 class="font-semibold text-lg">Sales Executive / Business Development</h4><p class="text-sm text-gray-600 mt-1">Drives sales, manages client relationships and business growth.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / BBA / Diploma</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / BBA"><div><h4 class="font-semibold text-lg">E-commerce Manager</h4><p class="text-sm text-gray-600 mt-1">Manages online stores, sales, and digital operations.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / BBA</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / Diploma"><div><h4 class="font-semibold text-lg">Supply Chain / Logistics Coordinator</h4><p class="text-sm text-gray-600 mt-1">Manages logistics, inventory and supply chain operations.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / Diploma</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BBA / B.Com / MBA"><div><h4 class="font-semibold text-lg">Operations Manager</h4><p class="text-sm text-gray-600 mt-1">Oversees business operations, processes and efficiency.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BBA / B.Com / MBA</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / BBA"><div><h4 class="font-semibold text-lg">Tax Consultant / GST Practitioner</h4><p class="text-sm text-gray-600 mt-1">Advises on taxation, compliance, and files returns.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / BBA</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / BBA / Certifications"><div><h4 class="font-semibold text-lg">Risk Analyst / Credit Analyst</h4><p class="text-sm text-gray-600 mt-1">Assesses financial risks and creditworthiness.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / BBA / Certifications</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BBA / B.Com / Entrepreneurship"><div><h4 class="font-semibold text-lg">Startup Founder / Entrepreneur</h4><p class="text-sm text-gray-600 mt-1">Starts and runs a new business venture.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BBA / B.Com / Entrepreneurship</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="12th / Certification"><div><h4 class="font-semibold text-lg">Retail Sales Associate</h4><p class="text-sm text-gray-600 mt-1">Frontline sales in stores and retail outlets.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: 12th / Certification</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="12th / Certification"><div><h4 class="font-semibold text-lg">Insurance Sales Agent / LIC Agent</h4><p class="text-sm text-gray-600 mt-1">Sells insurance policies and advises clients.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: 12th / Certification</p></div></div>
+             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / CMA"><div><h4 class="font-semibold text-lg">Internal Auditor / Internal Controls</h4><p class="text-sm text-gray-600 mt-1">Performs internal audits and process compliance.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / CMA</p></div></div>
+             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / Short Courses"><div><h4 class="font-semibold text-lg">Forex Dealer / Treasury Analyst</h4><p class="text-sm text-gray-600 mt-1">Handles foreign exchange and treasury operations.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / Short Courses</p></div></div>
+             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / BBA"><div><h4 class="font-semibold text-lg">Real Estate Agent / Property Manager</h4><p class="text-sm text-gray-600 mt-1">Buys/sells/rents properties and manages assets.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / BBA</p></div></div>
+             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / Certification"><div><h4 class="font-semibold text-lg">Supply Chain Consultant</h4><p class="text-sm text-gray-600 mt-1">Advises on supply chain optimization and logistics.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / Certification</p></div></div>
+             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / BBA"><div><h4 class="font-semibold text-lg">Corporate Trainer</h4><p class="text-sm text-gray-600 mt-1">Delivers corporate training on skills and tools.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / BBA</p></div></div>
+             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Com / BBA"><div><h4 class="font-semibold text-lg">Retail Planner / Inventory Controller</h4><p class="text-sm text-gray-600 mt-1">Plans retail inventory and replenishment strategies.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Com / BBA</p></div></div>
+             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Short Course / Bootcamp"><div><h4 class="font-semibold text-lg">Growth Hacker / Performance Marketer</h4><p class="text-sm text-gray-600 mt-1">Drives growth using data-driven marketing techniques.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Short Course / Bootcamp</p></div></div>
+             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Any"><div><h4 class="font-semibold text-lg">Freelancer (accounts/bookkeeping/marketing)</h4><p class="text-sm text-gray-600 mt-1">Provides freelance services in finance, marketing or admin.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Any</p></div></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-400 sm:text-center">©️ 2024 <a href="#" class="hover:underline">CareerBridge™️</a>. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const degreeFilter = document.getElementById('degree-filter');
+            const jobCards = Array.from(document.querySelectorAll('.job-card'));
+
+            const filterMap = {
+                'professional': ['ca', 'cs', 'cma'],
+                'degree': ['b.com', 'bba', 'bms', 'degree', 'b.tech'],
+                'postgrad': ['mba'],
+                'certificate': ['12th', 'cert', 'short course', 'diploma', 'bootcamp', 'any']
+            };
+
+            degreeFilter.addEventListener('change', (event) => {
+                const selectedCategory = event.target.value;
+
+                jobCards.forEach(card => {
+                    if (selectedCategory === 'all') {
+                        card.style.display = 'flex';
+                        return;
+                    }
+
+                    const degreeText = card.dataset.degree.toLowerCase();
+                    const keywords = filterMap[selectedCategory];
+                    
+                    const isVisible = keywords.some(keyword => degreeText.includes(keyword));
+                    
+                    card.style.display = isVisible ? 'flex' : 'none';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

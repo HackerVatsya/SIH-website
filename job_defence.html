@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government, Defence & Vocational Jobs - CareerBridge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style> 
+        body { 
+            font-family: 'Inter', sans-serif; 
+        } 
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-600">CareerBridge</a>
+            <a href="job_opportunities.html" class="text-gray-600 hover:text-indigo-600">
+                &larr; Back to Categories
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold">Govt, Defence & Vocational Careers</h1>
+            <p class="text-gray-600 mt-2">Opportunities open to students from all academic backgrounds.</p>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="mb-8 max-w-md mx-auto">
+            <label for="degree-filter" class="block text-sm font-medium text-gray-700 mb-2">Filter by Sector / Qualification:</label>
+            <select id="degree-filter" class="w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                <option value="all">All Opportunities</option>
+                <option value="govt-exam">Government (Exam Based)</option>
+                <option value="defence">Defence & Paramilitary</option>
+                <option value="diploma-iti">Vocational (ITI / Diploma / Certificate)</option>
+                <option value="degree">Government (Degree Based)</option>
+                <option value="12th">10th / 12th Pass Jobs</option>
+            </select>
+        </div>
+
+        <!-- Job Cards -->
+        <div id="job-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Government & Defence -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="UPSC (Any Degree)"><div><h4 class="font-semibold text-lg">Civil Services (IAS/IPS/IFS)</h4><p class="text-sm text-gray-600 mt-1">Administrative leadership and policy implementation in government.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: UPSC (Any Degree)</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="NDA / 12th"><div><h4 class="font-semibold text-lg">Indian Army / Air Force Officer (NDA)</h4><p class="text-sm text-gray-600 mt-1">Commissioned officer roles in defence services.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: NDA / 12th</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Agniveer / 12th"><div><h4 class="font-semibold text-lg">Agniveer / Soldier</h4><p class="text-sm text-gray-600 mt-1">Short-term service roles in the armed forces.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Agniveer / 12th</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="SSC CGL / Graduation"><div><h4 class="font-semibold text-lg">Inspector / Auditor (SSC CGL)</h4><p class="text-sm text-gray-600 mt-1">Government administrative and specialist roles in ministries.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: SSC CGL / Graduation</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="SSC CHSL / 12th"><div><h4 class="font-semibold text-lg">Clerk / Data Entry Operator (SSC CHSL)</h4><p class="text-sm text-gray-600 mt-1">Clerical and back-office roles in government offices.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: SSC CHSL / 12th</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="IBPS / SBI (Graduation)"><div><h4 class="font-semibold text-lg">Bank PO / Clerk</h4><p class="text-sm text-gray-600 mt-1">Banking roles in public sector banks and financial institutions.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: IBPS / SBI (Graduation)</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="RRB (Railways) / 10th-12th/ITI"><div><h4 class="font-semibold text-lg">Railway Technician / Goods Guard</h4><p class="text-sm text-gray-600 mt-1">Operational and technical roles in Indian Railways.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: RRB (Railways) / 10th-12th/ITI</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="CAPF Exams / Degree"><div><h4 class="font-semibold text-lg">Assistant Commandant (CAPF)</h4><p class="text-sm text-gray-600 mt-1">Leadership roles in paramilitary forces like BSF, CRPF.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: CAPF Exams / Degree</p></div></div>
+             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Indian Coast Guard / 12th-Grad"><div><h4 class="font-semibold text-lg">Coast Guard Officer / Sailor</h4><p class="text-sm text-gray-600 mt-1">Maritime security and coastal operations roles.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Indian Coast Guard / 12th-Grad</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Postal Circle / 10th-12th"><div><h4 class="font-semibold text-lg">Gramin Dak Sevak / Postman</h4><p class="text-sm text-gray-600 mt-1">Postal delivery and rural postal services.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Postal Circle / 10th-12th</p></div></div>
+
+            <!-- Vocational -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="ITI Electrician"><div><h4 class="font-semibold text-lg">Electrician (Residential/Industrial)</h4><p class="text-sm text-gray-600 mt-1">Installs, maintains and repairs electrical systems.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: ITI Electrician</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="ITI Fitter"><div><h4 class="font-semibold text-lg">Fitter / Machinist</h4><p class="text-sm text-gray-600 mt-1">Assembles and maintains mechanical components and machines.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: ITI Fitter</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Automotive Diploma / ITI"><div><h4 class="font-semibold text-lg">Automotive Technician / Mechanic</h4><p class="text-sm text-gray-600 mt-1">Maintains and repairs vehicles; EV specialization possible.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Automotive Diploma / ITI</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Solar PV Installer Course"><div><h4 class="font-semibold text-lg">Solar PV Installer / Technician</h4><p class="text-sm text-gray-600 mt-1">Installs and maintains solar PV systems.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Solar PV Installer Course</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Electric Vehicle Tech Course"><div><h4 class="font-semibold text-lg">EV Technician</h4><p class="text-sm text-gray-600 mt-1">Maintains electric vehicle powertrains and batteries.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Electric Vehicle Tech Course</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Web Dev Bootcamp"><div><h4 class="font-semibold text-lg">Web Developer / Coder</h4><p class="text-sm text-gray-600 mt-1">Builds and maintains websites and web applications.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Web Dev Bootcamp</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Automation / PLC Course"><div><h4 class="font-semibold text-lg">PLC / Automation Technician</h4><p class="text-sm text-gray-600 mt-1">Maintains PLCs and industrial automation systems.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Automation / PLC Course</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Mobile Repair Course"><div><h4 class="font-semibold text-lg">Mobile Phone Repair Technician</h4><p class="text-sm text-gray-600 mt-1">Repairs and services smartphones and electronics.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Mobile Repair Course</p></div></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-400 sm:text-center">©️ 2024 <a href="#" class="hover:underline">CareerBridge™️</a>. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const degreeFilter = document.getElementById('degree-filter');
+            const jobCards = Array.from(document.querySelectorAll('.job-card'));
+
+            const filterMap = {
+                'govt-exam': ['upsc', 'ssc', 'ibps', 'sbi', 'rrb', 'exam'],
+                'defence': ['nda', 'agniveer', 'army', 'air force', 'capf', 'coast guard'],
+                'diploma-iti': ['iti', 'diploma', 'course', 'bootcamp', 'plc'],
+                'degree': ['degree', 'graduation', 'grad'],
+                '12th': ['12th', '10th']
+            };
+
+            degreeFilter.addEventListener('change', (event) => {
+                const selectedCategory = event.target.value;
+
+                jobCards.forEach(card => {
+                    if (selectedCategory === 'all') {
+                        card.style.display = 'flex';
+                        return;
+                    }
+
+                    const degreeText = card.dataset.degree.toLowerCase();
+                    const keywords = filterMap[selectedCategory];
+                    
+                    const isVisible = keywords.some(keyword => degreeText.includes(keyword));
+                    
+                    card.style.display = isVisible ? 'flex' : 'none';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

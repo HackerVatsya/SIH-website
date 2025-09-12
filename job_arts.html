@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanities and Arts Jobs - CareerBridge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style> 
+        body { 
+            font-family: 'Inter', sans-serif; 
+        } 
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-600">CareerBridge</a>
+            <a href="job_opportunities.html" class="text-gray-600 hover:text-indigo-600">
+                &larr; Back to Categories
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold">Careers in Humanities / Arts</h1>
+            <p class="text-gray-600 mt-2">Opportunities in media, law, education, design, and social sciences.</p>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="mb-8 max-w-md mx-auto">
+            <label for="degree-filter" class="block text-sm font-medium text-gray-700 mb-2">Filter by Qualification Type:</label>
+            <select id="degree-filter" class="w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus-outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                <option value="all">All Qualifications</option>
+                <option value="degree">Bachelor's Degree (BA, BFA, LLB)</option>
+                <option value="postgrad">Post-Graduate / MA / Professional</option>
+                <option value="diploma">Diploma / B.Ed</option>
+                <option value="certificate">12th Pass / Certificate / Short Course</option>
+            </select>
+        </div>
+
+        <!-- Job Cards -->
+        <div id="job-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA + B.Ed / D.El.Ed"><div><h4 class="font-semibold text-lg">School Teacher</h4><p class="text-sm text-gray-600 mt-1">Teaches school subjects and prepares students for exams.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA + B.Ed / D.El.Ed</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA LLB (5 years) / LLB"><div><h4 class="font-semibold text-lg">Lawyer / Advocate</h4><p class="text-sm text-gray-600 mt-1">Represents clients in court, provides legal advice.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA LLB (5 years) / LLB</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="CLAT / Law pathway"><div><h4 class="font-semibold text-lg">Corporate Lawyer</h4><p class="text-sm text-gray-600 mt-1">Handles corporate legal cases, contracts and compliance.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: CLAT / Law pathway</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / MA (Psychology)"><div><h4 class="font-semibold text-lg">Counselor / Psychologist</h4><p class="text-sm text-gray-600 mt-1">Provides therapy and counseling services; clinical practice needs advanced degrees.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / MA (Psychology)</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / BJMC"><div><h4 class="font-semibold text-lg">Journalist / Reporter</h4><p class="text-sm text-gray-600 mt-1">Researches, reports and writes news for print/TV/online.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / BJMC</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / BJMC"><div><h4 class="font-semibold text-lg">Editor / Copy Editor</h4><p class="text-sm text-gray-600 mt-1">Edits and curates content for publications and media.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / BJMC</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / BFA / Diploma"><div><h4 class="font-semibold text-lg">Content Writer / Copywriter</h4><p class="text-sm text-gray-600 mt-1">Creates written content for marketing, blogs and media.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / BFA / Diploma</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / BFA"><div><h4 class="font-semibold text-lg">Graphic Designer</h4><p class="text-sm text-gray-600 mt-1">Creates visual content for branding, marketing and digital media.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / BFA</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / B.Des / Diploma"><div><h4 class="font-semibold text-lg">UI/UX Designer</h4><p class="text-sm text-gray-600 mt-1">Designs user interfaces and experiences for apps and websites.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / B.Des / Diploma</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / MA (Economics)"><div><h4 class="font-semibold text-lg">Economist</h4><p class="text-sm text-gray-600 mt-1">Analyzes economic trends and data for research or policy.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / MA (Economics)</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / MA (History)"><div><h4 class="font-semibold text-lg">Historian / Archaeologist</h4><p class="text-sm text-gray-600 mt-1">Researches and documents historical events or artifacts.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / MA (History)</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BHM / Diploma"><div><h4 class="font-semibold text-lg">Hotel Manager</h4><p class="text-sm text-gray-600 mt-1">Manages hotel operations, staff and guest services.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BHM / Diploma</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Diploma in Tourism"><div><h4 class="font-semibold text-lg">Travel Consultant / Tour Guide</h4><p class="text-sm text-gray-600 mt-1">Plans travel itineraries and guides tours.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Diploma in Tourism</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Des / Diploma"><div><h4 class="font-semibold text-lg">Fashion Designer</h4><p class="text-sm text-gray-600 mt-1">Designs clothing, accessories and fashion lines.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Des / Diploma</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / MA / PhD"><div><h4 class="font-semibold text-lg">Academic / University Professor</h4><p class="text-sm text-gray-600 mt-1">Teaches and researches at the university level.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / MA / PhD</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA (Sociology) / MSW"><div><h4 class="font-semibold text-lg">Social Worker</h4><p class="text-sm text-gray-600 mt-1">Provides social services and support to individuals and communities.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA (Sociology) / MSW</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Diploma / Short Course"><div><h4 class="font-semibold text-lg">Event Manager / Planner</h4><p class="text-sm text-gray-600 mt-1">Plans and executes events, conferences and functions.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Diploma / Short Course</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Diploma / Short Course"><div><h4 class="font-semibold text-lg">Interior Designer</h4><p class="text-sm text-gray-600 mt-1">Designs interior spaces for homes and businesses.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Diploma / Short Course</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / Short Course"><div><h4 class="font-semibold text-lg">Public Relations (PR) Executive</h4><p class="text-sm text-gray-600 mt-1">Manages public image and communications for clients.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / Short Course</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Diploma / Short Course"><div><h4 class="font-semibold text-lg">Animator / VFX Artist</h4><p class="text-sm text-gray-600 mt-1">Creates animation and visual effects for media.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Diploma / Short Course</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / B.Lib.Sc"><div><h4 class="font-semibold text-lg">Librarian</h4><p class="text-sm text-gray-600 mt-1">Manages library collections and assists patrons.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / B.Lib.Sc</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / Diploma"><div><h4 class="font-semibold text-lg">Special Education Teacher</h4><p class="text-sm text-gray-600 mt-1">Teaches students with special needs and disabilities.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / Diploma</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / Diploma / Short Course"><div><h4 class="font-semibold text-lg">Translator / Subtitler</h4><p class="text-sm text-gray-600 mt-1">Translates or subtitles content for media and global audiences.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / Diploma / Short Course</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / MA"><div><h4 class="font-semibold text-lg">Policy Researcher / Think Tank Analyst</h4><p class="text-sm text-gray-600 mt-1">Conducts policy research and advises government/NGOs.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / MA</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / JD / LLB"><div><h4 class="font-semibold text-lg">Legal Researcher / Law Clerk</h4><p class="text-sm text-gray-600 mt-1">Supports legal research for courts or firms.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / JD / LLB</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / BSc / BTech (interdisciplinary)"><div><h4 class="font-semibold text-lg">UX Researcher / Human Factors Specialist</h4><p class="text-sm text-gray-600 mt-1">Studies user behavior to improve product design.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / BSc / BTech</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Diploma / Short Course"><div><h4 class="font-semibold text-lg">Beautician / Cosmetologist</h4><p class="text-sm text-gray-600 mt-1">Provides beauty and grooming services.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Diploma / Short Course</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Short Course / Entrepreneurship"><div><h4 class="font-semibold text-lg">Freelancer (writer/consultant/artist)</h4><p class="text-sm text-gray-600 mt-1">Independent work offering services across fields.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Short Course / Entrepreneurship</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA (Sociology) / MA"><div><h4 class="font-semibold text-lg">Community Development Officer / NGO Manager</h4><p class="text-sm text-gray-600 mt-1">Leads community programs and social initiatives.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA (Sociology) / MA</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / BSc"><div><h4 class="font-semibold text-lg">Archivist / Records Manager</h4><p class="text-sm text-gray-600 mt-1">Maintains and preserves institutional records and archives.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / BSc</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BA / BTech (Hybrid)"><div><h4 class="font-semibold text-lg">Product Management (non-tech entry)</h4><p class="text-sm text-gray-600 mt-1">Manages product strategy, often from business or design background.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BA / BTech (Hybrid)</p></div></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-400 sm:text-center">©️ 2024 <a href="#" class="hover:underline">CareerBridge™️</a>. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const degreeFilter = document.getElementById('degree-filter');
+            const jobCards = Array.from(document.querySelectorAll('.job-card'));
+
+            const filterMap = {
+                'degree': ['ba', 'bfa', 'llb', 'b.des', 'bhm', 'bjmc', 'b.lib.sc', 'bsc', 'btech'],
+                'postgrad': ['ma', 'phd', 'msw', 'jd'],
+                'diploma': ['diploma', 'b.ed'],
+                'certificate': ['12th', 'cert', 'short course', 'clat', 'entrepreneurship']
+            };
+
+            degreeFilter.addEventListener('change', (event) => {
+                const selectedCategory = event.target.value;
+
+                jobCards.forEach(card => {
+                    if (selectedCategory === 'all') {
+                        card.style.display = 'flex';
+                        return;
+                    }
+
+                    const degreeText = card.dataset.degree.toLowerCase();
+                    const keywords = filterMap[selectedCategory];
+                    
+                    const isVisible = keywords.some(keyword => degreeText.includes(keyword));
+                    
+                    card.style.display = isVisible ? 'flex' : 'none';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

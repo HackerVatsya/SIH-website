@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Arts & Humanities Colleges - CareerBridge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-600">CareerBridge</a>
+            <div class="flex items-center space-x-4">
+                 <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html#features" class="text-gray-600 hover:text-indigo-600">Features</a>
+                    <a href="index.html#services" class="text-gray-600 hover:text-indigo-600">Services</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+                </div>
+                <a href="login.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
+                    Sign Up
+                </a>
+                 <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0_0_24_24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="mb-12">
+            <a href="college_directory.html" class="text-indigo-600 hover:underline mb-4 block">&larr; Back to Directory</a>
+            <h1 class="text-4xl font-bold text-gray-900">Top Arts & Humanities Colleges</h1>
+            <p class="text-lg text-gray-600 mt-2">Discover institutions for creative and critical thinkers.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8 sticky top-20 z-40">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <input type="text" placeholder="Search by college name..." class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option selected disabled>Filter by State</option>
+                    <option>Jammu & Kashmir</option>
+                    <option>New York</option>
+                    <option>Texas</option>
+                    <option>Massachusetts</option>
+                </select>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option selected disabled>Sort by</option>
+                    <option>Ranking</option>
+                    <option>Fee Structure</option>
+                    <option>User Reviews</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- College Listings -->
+        <div class="space-y-6">
+            <!-- College Card 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_5b8-DpZgrWD1bN6aYsP13LJsfkbAb18W1g&s" alt="College Image" class="w-full md:w-1/4 h-48 md:h-auto object-cover">
+                <div class="p-6 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900">Amar Singh College, Srinagar</h3>
+                        <p class="text-md text-gray-600 mb-2">Srinagar, Jammu & Kashmir</p>
+                        <p class="text-gray-700 mb-4">A historic and architecturally significant college, recognized with a UNESCO award. It offers a wide range of courses in Arts and Social Sciences.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">B.A. (English Hons)</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Political Science</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">History</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Sociology</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-700 transition-colors">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- College Card 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4KSG-JdUheXrHtTBRlnpGcMPEd_hVdFHCew&s" alt="College Image" class="w-full md:w-1/4 h-48 md:h-auto object-cover">
+                <div class="p-6 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900">Govt. College for Women, M.A. Road</h3>
+                        <p class="text-md text-gray-600 mb-2">Srinagar, Jammu & Kashmir</p>
+                        <p class="text-gray-700 mb-4">A leading women's college in the region, offering extensive programs in humanities, social sciences, and home science.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full">B.A.</span>
+                            <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Home Science</span>
+                            <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Journalism</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-700 transition-colors">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- College Card 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row">
+                <img src="https://gdcbhadarwah.ac.in/images/01.jpg" alt="College Image" class="w-full md:w-1/4 h-48 md:h-auto object-cover">
+                <div class="p-6 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900">Govt. Degree College, Bhaderwah</h3>
+                        <p class="text-md text-gray-600 mb-2">Bhaderwah, Jammu & Kashmir</p>
+                        <p class="text-gray-700 mb-4">Established in 1955, this college serves the Chenab valley region with a strong focus on arts and humanities, also offering postgraduate courses.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                           <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">B.A.</span>
+                           <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">M.A. Urdu</span>
+                           <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">M.A. Chemistry</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-700 transition-colors">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- College Card 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2n0cixtXCvJUCCk3ji_0P0I3Fhi3tk2eOSA&s" alt="College Image" class="w-full md:w-1/4 h-48 md:h-auto object-cover">
+                <div class="p-6 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900">Govt. College for Women, Parade Ground, Jammu</h3>
+                        <p class="text-md text-gray-600 mb-2">Jammu, Jammu & Kashmir</p>
+                        <p class="text-gray-700 mb-4">An autonomous college and one of the premier women's institutions in Jammu, offering a wide array of Arts and Social Science courses.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                           <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">B.A.</span>
+                           <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">M.A. English</span>
+                           <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">M.A. Dogri</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-700 transition-colors">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- College Card 5 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row">
+                <img src="https://www.collegeduniyabharat.com/wp-content/uploads/2024/12/OIP-16.jpg" alt="College Image" class="w-full md:w-1/4 h-48 md:h-auto object-cover">
+                <div class="p-6 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900">Shri Krishan Chander Govt. Degree College, Poonch</h3>
+                        <p class="text-md text-gray-600 mb-2">Poonch, Jammu & Kashmir</p>
+                        <p class="text-gray-700 mb-4">A well-established college in a border region, providing critical access to higher education in arts, science, and commerce.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                           <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">B.A.</span>
+                           <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">B.A. (Hons.) Urdu</span>
+                           <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">BCA</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-700 transition-colors">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- College Card 6 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row">
+                <img src="https://content.jdmagicbox.com/comp/udhampur/x8/9999p1992.1992.180814111849.t6x8/catalogue/government-degree-college-ramnagar-ramnagar-udhampur-colleges-6SvlGWtmN7.jpg" alt="College Image" class="w-full md:w-1/4 h-48 md:h-auto object-cover">
+                <div class="p-6 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900">Govt. Degree College (Boys), Udhampur</h3>
+                        <p class="text-md text-gray-600 mb-2">Udhampur, Jammu & Kashmir</p>
+                        <p class="text-gray-700 mb-4">A major educational hub in Udhampur district, offering postgraduate programs in Hindi, English, and Chemistry alongside various undergraduate courses.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                           <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full">B.A.</span>
+                           <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full">M.A. Hindi</span>
+                           <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full">M.A. English</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-700 transition-colors">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-12">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-400 sm:text-center">©️ 2024 <a href="index.html" class="hover:underline">CareerBridge™️</a>. All Rights Reserved.</span>
+                <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                   <!-- Social Icons can go here -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
