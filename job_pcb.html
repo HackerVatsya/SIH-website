@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science (PCB) Jobs - MargDarshan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style> 
+        body { 
+            font-family: 'Inter', sans-serif; 
+        } 
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-600">MargDarshan</a>
+            <a href="job_opportunities.html" class="text-gray-600 hover:text-indigo-600">
+                &larr; Back to Categories
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold">Careers in Science (PCB)</h1>
+            <p class="text-gray-600 mt-2">Opportunities in healthcare, life sciences, and research.</p>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="mb-8 max-w-md mx-auto">
+            <label for="degree-filter" class="block text-sm font-medium text-gray-700 mb-2">Filter by Qualification Type:</label>
+            <select id="degree-filter" class="w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                <option value="all">All Qualifications</option>
+                <option value="degree">Medical / Professional Degree</option>
+                <option value="bsc">B.Sc Degree</option>
+                <option value="diploma">Diploma</option>
+                <option value="certificate">Certificate / Short Course</option>
+                <option value="12th">12th Pass / Entry Level</option>
+            </select>
+        </div>
+
+        <!-- Job Cards -->
+        <div id="job-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="MBBS Degree (via NEET)"><div><h4 class="font-semibold text-lg">Doctor / Physician / Surgeon</h4><p class="text-sm text-gray-600 mt-1">Diagnoses, treats and manages patient care; specialization possible.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: MBBS Degree (via NEET)</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BDS Degree"><div><h4 class="font-semibold text-lg">Dentist / Orthodontist</h4><p class="text-sm text-gray-600 mt-1">Treats dental issues, oral surgery and orthodontics.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BDS Degree</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BAMS, BHMS, or BUMS Degree"><div><h4 class="font-semibold text-lg">Ayurvedic / Homeopathic / Unani Practitioner</h4><p class="text-sm text-gray-600 mt-1">Provides traditional medicine and therapy in respective systems.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BAMS, BHMS, or BUMS Degree</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Sc Nursing or GNM Diploma"><div><h4 class="font-semibold text-lg">Staff Nurse / Clinical Nurse</h4><p class="text-sm text-gray-600 mt-1">Provides nursing care and supports patient recovery.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Sc Nursing or GNM Diploma</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BPT Degree"><div><h4 class="font-semibold text-lg">Physiotherapist</h4><p class="text-sm text-gray-600 mt-1">Rehabilitates patients to restore mobility and function.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BPT Degree</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="BOT Degree"><div><h4 class="font-semibold text-lg">Occupational Therapist</h4><p class="text-sm text-gray-600 mt-1">Helps patients regain daily living skills.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: BOT Degree</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Pharm Degree"><div><h4 class="font-semibold text-lg">Pharmacist / Clinical Pharmacist</h4><p class="text-sm text-gray-600 mt-1">Dispenses medicines and advises on pharmacotherapy.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Pharm Degree</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Sc MLT or Diploma"><div><h4 class="font-semibold text-lg">Medical Laboratory Technician (MLT)</h4><p class="text-sm text-gray-600 mt-1">Performs diagnostic tests and lab analyses.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Sc MLT or Diploma</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Sc Radiography or Diploma"><div><h4 class="font-semibold text-lg">Radiographer / Imaging Technologist</h4><p class="text-sm text-gray-600 mt-1">Operates imaging equipment for diagnostics.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Sc Radiography or Diploma</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Diploma or Certificate"><div><h4 class="font-semibold text-lg">Ultrasound Technician / Sonographer</h4><p class="text-sm text-gray-600 mt-1">Performs ultrasound imaging for diagnostics.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Diploma or Certificate</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.V.Sc Degree"><div><h4 class="font-semibold text-lg">Veterinarian</h4><p class="text-sm text-gray-600 mt-1">Provides medical care and surgery for animals.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.V.Sc Degree</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Life Science Degree / B.Pharm"><div><h4 class="font-semibold text-lg">Clinical Researcher</h4><p class="text-sm text-gray-600 mt-1">Conducts clinical trials, medical research and data analysis.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Life Science Degree / B.Pharm</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Sc Nutrition / Dietetics"><div><h4 class="font-semibold text-lg">Dietitian / Nutritionist</h4><p class="text-sm text-gray-600 mt-1">Provides dietary advice for health and disease management.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Sc Nutrition / Dietetics</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Sc / B.Tech Biotech"><div><h4 class="font-semibold text-lg">Biotechnologist</h4><p class="text-sm text-gray-600 mt-1">Uses biological systems for research and product development.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Sc / B.Tech Biotech</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Sc Forensic Science"><div><h4 class="font-semibold text-lg">Forensic Scientist</h4><p class="text-sm text-gray-600 mt-1">Analyzes crime scene evidence for legal investigations.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Sc Forensic Science</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Sc Agriculture"><div><h4 class="font-semibold text-lg">Agricultural Scientist / Agronomist</h4><p class="text-sm text-gray-600 mt-1">Researches crop production and soil management.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Sc Agriculture</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Sc Horticulture / Agriculture"><div><h4 class="font-semibold text-lg">Horticulturist</h4><p class="text-sm text-gray-600 mt-1">Cultivates plants, fruits, and manages gardens/nurseries.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Sc Horticulture / Agriculture</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Diploma / B.Sc OTT"><div><h4 class="font-semibold text-lg">Operation Theatre Technician</h4><p class="text-sm text-gray-600 mt-1">Assists surgical teams in operating rooms.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Diploma / B.Sc OTT</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Diploma / Certificate"><div><h4 class="font-semibold text-lg">Dental Hygienist / Assistant</h4><p class="text-sm text-gray-600 mt-1">Assists dentists and provides preventative dental care.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Diploma / Certificate</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Sc Env. Science / Public Health"><div><h4 class="font-semibold text-lg">Environmental Health Technician</h4><p class="text-sm text-gray-600 mt-1">Monitors environmental pollutants and public health impacts.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Sc Env. Science / Public Health</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Sc / Diploma"><div><h4 class="font-semibold text-lg">Toxicology Lab Technician</h4><p class="text-sm text-gray-600 mt-1">Performs toxicological analyses in labs and forensics.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Sc / Diploma</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Sc Clinical BioChem / MLT"><div><h4 class="font-semibold text-lg">Clinical Technician / Lab Analyst</h4><p class="text-sm text-gray-600 mt-1">Performs clinical biochemistry tests and data recording.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Sc Clinical BioChem / MLT</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Sc Agriculture or Diploma"><div><h4 class="font-semibold text-lg">Plant Breeder Assistant / Agritech Field Officer</h4><p class="text-sm text-gray-600 mt-1">Supports crop breeding and field-level agritech implementations.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Sc Agriculture or Diploma</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="Degree + Short Courses"><div><h4 class="font-semibold text-lg">Diagnostics / Lab Startup Founder</h4><p class="text-sm text-gray-600 mt-1">Starts diagnostic services, labs or health-tech solutions.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: Degree + Short Courses</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Sc Psychology / Diploma"><div><h4 class="font-semibold text-lg">Psychiatric Technician / Assistant</h4><p class="text-sm text-gray-600 mt-1">Supports psychiatric clinicians in treatment settings.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Sc Psychology / Diploma</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="12th Pass / Apprenticeship"><div><h4 class="font-semibold text-lg">Animal Caretaker / Kennel Assistant</h4><p class="text-sm text-gray-600 mt-1">Assists in animal care facilities and shelters.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: 12th Pass / Apprenticeship</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="12th Pass + Short Course"><div><h4 class="font-semibold text-lg">Health Educator / Community Health Worker</h4><p class="text-sm text-gray-600 mt-1">Provides basic health education and community outreach.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: 12th Pass + Short Course</p></div></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between job-card" data-degree="B.Sc Molecular Diagnostics / Diploma"><div><h4 class="font-semibold text-lg">Molecular Diagnostics Technician</h4><p class="text-sm text-gray-600 mt-1">Performs PCR and molecular testing for diseases.</p></div><div class="mt-4 pt-3 border-t border-gray-100"><p class="text-xs text-indigo-600 font-medium">Requires: B.Sc Molecular Diagnostics / Diploma</p></div></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-400 sm:text-center">©️ 2024 <a href="#" class="hover:underline">MargDarshan™️</a>. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const degreeFilter = document.getElementById('degree-filter');
+            const jobCards = Array.from(document.querySelectorAll('.job-card'));
+
+            const filterMap = {
+                'degree': ['degree', 'mbbs', 'bds', 'bams', 'bhms', 'bpt', 'bot', 'b.pharm', 'b.v.sc'],
+                'bsc': ['b.sc'],
+                'diploma': ['diploma', 'gnm'],
+                'certificate': ['certificate', 'short course'],
+                '12th': ['12th', 'pass']
+            };
+
+            degreeFilter.addEventListener('change', (event) => {
+                const selectedCategory = event.target.value;
+
+                jobCards.forEach(card => {
+                    if (selectedCategory === 'all') {
+                        card.style.display = 'flex';
+                        return;
+                    }
+
+                    const degreeText = card.dataset.degree.toLowerCase();
+                    const keywords = filterMap[selectedCategory];
+                    
+                    const isVisible = keywords.some(keyword => degreeText.includes(keyword));
+                    
+                    card.style.display = isVisible ? 'flex' : 'none';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
