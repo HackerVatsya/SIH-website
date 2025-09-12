@@ -6,6 +6,8 @@
     <title>CareerBridge - Your Future Career Path</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- D3.js for tree animation -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -25,6 +27,42 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .feature-card-link {
+            display: block;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+        /* Styles for the D3 Tree */
+        .tree-container {
+            width: 100%;
+            height: 600px;
+            background-color: #f9fafb;
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
+        }
+        .node circle {
+            cursor: pointer;
+            stroke: #4f46e5;
+            stroke-width: 2px;
+            fill: #c7d2fe;
+        }
+        .node--leaf circle {
+             fill: #4f46e5;
+        }
+        .node text {
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            pointer-events: none;
+            text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+        }
+        .link {
+            fill: none;
+            stroke: #9ca3af;
+            stroke-width: 1.5px;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -32,14 +70,13 @@
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-indigo-600">CareerBridge</a>
+            <a href="index.html" class="text-2xl font-bold text-indigo-600">CareerBridge</a>
             <div class="flex items-center space-x-4">
                  <div class="hidden md:flex items-center space-x-4">
                     <a href="#features" class="text-gray-600 hover:text-indigo-600">Features</a>
                     <a href="#services" class="text-gray-600 hover:text-indigo-600">Services</a>
                     <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
                 </div>
-                <!-- Updated Sign Up Button -->
                 <a href="login.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
                     Sign Up
                 </a>
@@ -61,12 +98,24 @@
         <div class="container mx-auto px-6 py-24 text-center">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">Find Your Future</h1>
             <p class="text-lg md:text-xl mb-8">Personalized career guidance at every step.</p>
-            <a href="#features" class="bg-white text-indigo-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-200 transition duration-300">Get Started</a>
+            <a href="#career-tree" class="bg-white text-indigo-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-200 transition duration-300">Start Exploring</a>
         </div>
     </section>
 
+    <!-- Interactive Career Tree Section -->
+    <section id="career-tree" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4 reveal">Visually Explore Your Career Path</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Click on the circular nodes to expand the tree and discover different career options. It all starts with your stream of interest after the 10th grade.</p>
+            <div class="tree-container reveal">
+                <svg id="tree-svg"></svg>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Features Section -->
-    <section id="features" class="py-20">
+    <section id="features" class="py-20 bg-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12 reveal">Explore Your Path</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -79,39 +128,26 @@
                     <p class="text-gray-600">Take our intelligent quiz to discover career paths and courses tailored to your personality, interests, and skills.</p>
                 </div>
                 <!-- College Feature -->
-                <a href="college_directory.html" class="block">
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 reveal">
-                        <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 14l9-5-9-5-9 5 9 5zm0 7v-7m0 0l-9-5m9 5l9-5">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-4">College Directory</h3>
-                        <p class="text-gray-600">Explore a comprehensive database of colleges. Read authentic reviews, compare campuses, and find the perfect fit for you.</p>
-                    </div>
-                </a>
-
-                <!-- Job Feature -->
-                 <div class="transition-transform hover:-translate-y-2">
-                    <a href="job_opportunities.html" class="block">
-                        <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transform transition-all duration-300">
-      
-                            <!-- CIRCULAR ICON -->
-                            <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                                <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                        d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m0-6l9-5m-9 5l-9-5" />
-                                </svg>
+                <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 reveal">
+                    <a href="college_directory.html" class="feature-card-link">
+                        <div class="p-8">
+                            <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                                <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-5.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-5.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222 4 2.222V20M1 12v7a2 2 0 002 2h18a2 2 0 002-2v-7"></path></svg>
                             </div>
-
-                            <!-- TEXT -->
-                            <h3 class="text-xl font-semibold mb-4 text-center">Job Opportunities</h3>
-                            <p class="text-gray-600 text-center">
-                                Discover job openings, internships, and professional counseling to kickstart your career and achieve your goals.
-                            </p>
+                            <h3 class="text-xl font-semibold mb-4">College Directory</h3>
+                            <p class="text-gray-600">Explore a comprehensive database of colleges. Read authentic reviews, compare campuses, and find the perfect fit for you.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Job Feature -->
+                <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 reveal">
+                    <a href="job_opportunities.html" class="feature-card-link">
+                        <div class="p-8">
+                            <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                                <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">Job Opportunities</h3>
+                            <p class="text-gray-600">Discover job openings, internships, and professional counseling to kickstart your career and achieve your goals.</p>
                         </div>
                     </a>
                 </div>
@@ -120,7 +156,7 @@
     </section>
 
     <!-- Additional Services Section -->
-    <section id="services" class="py-20 bg-gray-100">
+    <section id="services" class="py-20">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12 reveal">Additional Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -198,7 +234,7 @@
             </div>
             <hr class="my-6 border-gray-700 sm:mx-auto" />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-gray-400 sm:text-center">©️ 2025 <a href="#" class="hover:underline">CareerBridge™️</a>. All Rights Reserved.</span>
+                <span class="text-sm text-gray-400 sm:text-center">©️ 2024 <a href="#" class="hover:underline">CareerBridge™️</a>. All Rights Reserved.</span>
                 <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                     <!-- Social Media Icons -->
                 </div>
@@ -230,13 +266,204 @@
                     }
                 });
             }, {
-                threshold: 0.1 // Trigger when 10% of the element is visible
+                threshold: 0.1
             });
 
             const elementsToReveal = document.querySelectorAll('.reveal');
             elementsToReveal.forEach(el => {
                 observer.observe(el);
             });
+        });
+
+        // --- D3 Interactive Tree Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const careerData = {
+                name: "After 10th",
+                children: [
+                    {
+                        name: "Engineering (PCM)",
+                        children: [
+                            { name: "Computer Science" },
+                            { name: "Mechanical Engg." },
+                            { name: "Civil Engg." },
+                            { name: "Electrical Engg." }
+                        ]
+                    },
+                    {
+                        name: "Medical (PCB)",
+                        children: [
+                            { name: "MBBS" },
+                            { name: "BDS (Dental)" },
+                            { name: "Pharmacy" },
+                            { name: "Nursing" }
+                        ]
+                    },
+                    {
+                        name: "Commerce",
+                        children: [
+                            { name: "B.Com" },
+                            { name: "BBA" },
+                            { name: "CA (Chartered login.htmlancy)" }
+                        ]
+                    },
+                    {
+                        name: "Arts & Humanities",
+                        children: [
+                            { name: "Journalism" },
+                            { name: "Law (LLB)" },
+                            { name: "Fine Arts" },
+                            { name: "History" }
+                        ]
+                    },
+                    {
+                        name: "Defence",
+                        children: [
+                            {
+                                name: "Army",
+                                children: [
+                                    { name: "Infantry" },
+                                    { name: "Artillery" }
+                                ]
+                            },
+                            { name: "Navy" },
+                            {
+                                name: "Air Force",
+                                children: [
+                                    { name: "Flying" },
+                                    { name: "Ground Branch" }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            };
+
+            const container = document.querySelector('.tree-container');
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            
+            const svg = d3.select("#tree-svg")
+                .attr("width", width)
+                .attr("height", height)
+                .append("g")
+                .attr("transform", `translate(80, 0)`); // Give more space on the left
+
+            const root = d3.hierarchy(careerData);
+            const treeLayout = d3.tree().size([height, width - 200]); // Use height for vertical, width for horizontal
+            
+            let i = 0;
+            
+            root.x0 = height / 2;
+            root.y0 = 0;
+            
+            // Collapse after the first level
+            root.children.forEach(collapse);
+            update(root);
+
+            function collapse(d) {
+                if (d.children) {
+                    d._children = d.children;
+                    d._children.forEach(collapse);
+                    d.children = null;
+                }
+            }
+            
+            function update(source) {
+                const duration = 750;
+                
+                const treeData = treeLayout(root);
+                const nodes = treeData.descendants();
+                const links = treeData.links();
+                
+                nodes.forEach(d => { d.y = d.depth * 180; }); // Horizontal spacing based on depth
+
+                // --- Nodes ---
+                const node = svg.selectAll("g.node")
+                    .data(nodes, d => d.id || (d.id = ++i));
+
+                const nodeEnter = node.enter().append("g")
+                    .attr("class", "node")
+                    .attr("transform", d => `translate(${source.y0}, ${source.x0})`)
+                    .style("opacity", 0)
+                    .on("click", (event, d) => {
+                        toggle(d);
+                        update(d);
+                    });
+
+                nodeEnter.append("circle")
+                    .attr("r", 8)
+                    .attr("class", d => d._children ? "node--internal" : "node--leaf");
+
+                nodeEnter.append("text")
+                    .attr("dy", ".35em")
+                    .attr("x", d => d.children || d._children ? -16 : 16)
+                    .attr("text-anchor", d => d.children || d._children ? "end" : "start")
+                    .text(d => d.data.name);
+                
+                // Transition nodes to their new position.
+                const nodeUpdate = node.merge(nodeEnter).transition().duration(duration)
+                    .attr("transform", d => `translate(${d.y}, ${d.x})`)
+                    .style("opacity", 1);
+                
+                nodeUpdate.select('circle')
+                    .attr("r", 8)
+                    .attr("class", d => d._children ? "node--internal" : "node--leaf");
+
+                // Transition exiting nodes to the parent's new position.
+                node.exit().transition().duration(duration)
+                    .attr("transform", d => `translate(${source.y}, ${source.x})`)
+                    .style("opacity", 0)
+                    .remove();
+
+                // --- Links ---
+                const link = svg.selectAll("path.link")
+                    .data(links, d => d.target.id);
+
+                const linkEnter = link.enter().insert("path", "g")
+                    .attr("class", "link")
+                    .attr('d', d => {
+                        const o = {x: source.x0, y: source.y0};
+                        return diagonal(o, o);
+                    })
+                    .style("opacity", 0);
+                    
+                link.merge(linkEnter).transition().duration(duration)
+                     .attr('d', d => diagonal(d.source, d.target))
+                     .style("opacity", 1);
+
+                link.exit().transition().duration(duration)
+                    .attr('d', d => {
+                        const o = {x: source.x, y: source.y};
+                        return diagonal(o, o);
+                     })
+                    .style("opacity", 0)
+                    .remove();
+
+                // Store the old positions for transition.
+                nodes.forEach(d => {
+                    d.x0 = d.x;
+                    d.y0 = d.y;
+                });
+
+                function toggle(d) {
+                    if (d.children) {
+                        d._children = d.children;
+                        d.children = null;
+                    } else {
+                        d.children = d._children;
+                        d._children = null;
+                    }
+                }
+                
+                function diagonal(s, d) {
+                    // Path for left-to-right curved links
+                    const path = `M ${s.y} ${s.x}
+                                C ${(s.y + d.y) / 2} ${s.x},
+                                  ${(s.y + d.y) / 2} ${d.x},
+                                  ${d.y} ${d.x}`
+                    return path
+                }
+            }
         });
     </script>
 </body>
